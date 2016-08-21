@@ -23,6 +23,9 @@ mongoose.connect('mongodb://localhost/react-tweets');
 // create new twitter instance
 var twit = new twitter(config.twitter);
 
+// index route
+app.get('/', routes.index);
+
 // page routes
 app.get('page/:page/:skip', routes.page);
 
